@@ -1,0 +1,27 @@
+<div ng-controller="modulesController as vm">
+<div ng-repeat="c in vm.modules| filter:vm.filtProj">
+  <h4>{{c.creator.creator.username}}<br></h4>
+<h1>Title : {{c.creator.title}}</h1>
+
+<ul class="nav nav-pills" id="myPill">
+<li class="active" ng-class="{active:menuCtrl.isSelected(1)}"><a ng-click="vm.select(1)" data-toggle="tab" href="#home">Description</a></li>
+<li  ng-class="{active:menuCtrl.isSelected(2)}"><a ng-click="vm.select(2)" data-toggle="tab" href="#menu1">Results</a></li>
+<li ng-class="{active:menuCtrl.isSelected(3)}"><a ng-click="vm.select(3)" data-toggle="tab" href="#menu2">Process</li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active ">
+
+    <p>{{c.creator.description}}</p>
+  </div>
+<div id="menu1" class="tab-pane fade">
+
+    <p> {{c.results}}.</p>
+</div>
+<div id="menu2" class="tab-pane fade">
+
+    <p>{{c.process}} </p>
+</div>
+</div>
+</div>
+</div>

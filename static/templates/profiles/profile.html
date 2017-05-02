@@ -1,0 +1,8 @@
+<div class="Profile" ng-show="vm.Profile">
+  <div class="jumbotron Profile__header">
+    <h1 class="Profile__username">+{{ vm.Profile.username }}</h1>
+    <p class="Profile__tagline">{{ vm.Profile.tagline }}</p>
+  </div>
+
+  <projects projects="vm.projects"></projects>
+</div>
